@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         val updatePendingIntent = PendingIntent.getBroadcast(this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT)
 
         val builder = getNotificationBuilder()
-        builder.addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent)
+        builder.addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent)     // Icons specified in addAction are not displayed from Android Nougat onwards but still required for older devices
 
         notificationManager.notify(NOTIFICATION_ID, builder.build())
         setNotificationButtonState(isCreateEnabled = false, isUpdateEnabled = true, isCancelEnabled = true)
