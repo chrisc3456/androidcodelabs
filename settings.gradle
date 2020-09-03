@@ -1,0 +1,3 @@
+include ':notifications'
+include ':app'
+rootProject.name = "androidcodelabs"
